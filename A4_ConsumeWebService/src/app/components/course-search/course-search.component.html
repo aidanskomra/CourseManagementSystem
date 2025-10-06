@@ -1,0 +1,17 @@
+<!-- src/app/components/course-search/course-search.component.html -->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <input type="text" [(ngModel)]="searchName" class="form-control" placeholder="Search by course name">
+    </div>
+    <div class="col">
+      <button (click)="searchCourses()" class="btn btn-primary">Search</button> <!-- No parameter here -->
+    </div>
+  </div>
+  <div *ngIf="courseSearch?.length">
+    <ul *ngFor="let course of courseSearch">
+      <li>{{ course.name }}</li>
+    </ul>
+  </div>
+</div>
