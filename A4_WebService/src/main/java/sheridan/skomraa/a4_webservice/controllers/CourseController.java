@@ -33,7 +33,7 @@ public class CourseController {
     }
 
 
-    @GetMapping(value = "/{id}")  // "value" only here to illustrate our Mappings can //do more!
+    @GetMapping(value = "/{id}")
     public Course getIndividualCourse(@PathVariable Long id) {
         return da.findById(id).get();
     }
